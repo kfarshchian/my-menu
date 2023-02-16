@@ -1,0 +1,97 @@
+  <form id="form">
+          <label>Keyword</label>
+          <input type="text" id="keyword" title="keyword" required>
+          <label>Diet</label>
+          <select name="Diet" id="diet" title="diet">
+            <option></option>
+            <option>balanced</option>
+            <option>high-fiber</option>
+            <option>high-protein</option>
+            <option>low-carb</option>
+            <option>low-fat</option>
+            <option>low-sodium</option>
+          </select>
+          <label>Health</label>
+          <select name="Health" id="health" title="health">
+            <option></option>
+            <option>alcohol-cocktail</option>
+            <option>alcohol-free</option>
+            <option>celery-free</option>
+            <option>crustacean-free</option>
+            <option>dairy-free</option>
+            <option>DASH</option>
+            <option>egg-free</option>
+            <option>fish-free</option>
+            <option>fodmap-free</option>
+            <option>gluten-free</option>
+            <option>immuno-supportive</option>
+            <option>keto-friendly</option>
+            <option>kidney-friendly</option>
+            <option>kosher</option>
+            <option>low-fat-abs</option>
+            <option>low-potassium</option>
+            <option>low-sugar</option>
+            <option>lupine-free</option>
+            <option>Mediterranean</option>
+            <option>mollusk-free</option>
+            <option>no-oil-added</option>
+            <option>paleo</option>
+            <option>peanut-free</option>
+            <option>pescatarian</option>
+            <option>pork-free</option>
+            <option>red-meat-free</option>
+            <option>sesame-free</option>
+            <option>shellfish-free</option>
+            <option>soy-free</option>
+            <option>sugar-concius</option>
+            <option>sulfite-free</option>
+            <option>tree-nut-free</option>
+            <option>vegan</option>
+            <option>vegetarian</option>
+            <option>wheat-free</option>
+          </select>
+          <label>Cuisine Type</label>
+          <select name="Cuisine Type" id="cuisineType" title="cuisineType">
+            <option></option>
+            <option>American</option>
+            <option>Asian</option>
+            <option>British</option>
+            <option>Caribbean</option>
+            <option>Central Europe</option>
+            <option>Chinese</option>
+            <option>Eastern Europe</option>
+            <option>French</option>
+            <option>Indian</option>
+            <option>Italian</option>
+            <option>Japanese</option>
+            <option>Kosher</option>
+            <option>Mediterranean</option>
+            <option>Mexican</option>
+            <option>Middle Eastern</option>
+            <option>Nordic</option>
+            <option>South American</option>
+            <option>South East Asian</option>
+          </select>
+          <label>Meal Type</label>
+          <select name="Meal Type" id="mealType" title="mealType">
+            <option></option>
+            <option>Breakfast</option>
+            <option>Dinner</option>
+            <option>Lunch</option>
+            <option>Snack</option>
+            <option>Teatime</option>
+          </select>
+          <label>Calories</label>
+          <input name="calories" id="calories" title="calories">
+          <button type="submit" name="search-btn" id="search">Search</button>
+</form>
+
+<div id="results-container"></div>
+
+{{!-- {{#each hits.length}}
+
+ 
+
+{{/each }} --}}
+
+<script src="/js/search.js"></script>

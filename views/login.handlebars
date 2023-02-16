@@ -1,0 +1,54 @@
+<div class="card column mt-6" id="login-card">
+  <header class="card-header has-background-grey-lighter mt-3">
+    <p class="card-header-title is-centered">
+      Login
+    </p>
+  </header>
+  <form class="form login-form card-content">
+    <div class="form-group field">
+      {{! <label for="email-login">email:</label>
+      <input class="form-input" type="text" id="email-login" /> }}
+      <label class="label">Email</label>
+      <div class="control has-icons-left has-icons-right">
+        <input
+          class="input form-input"
+          type="text"
+          id="email-login"
+          placeholder="example@company.com"
+        />
+        <span class="icon is-large is-left">
+          <ion-icon size="large" name="mail"></ion-icon>
+        </span>
+      </div>
+    </div>
+    <div class="form-group field">
+      {{! <label for="password-login">password:</label>
+      <input class="form-input" type="password" id="password-login" /> }}
+      <label class="label">Password</label>
+      <div class="control has-icons-left has-icons-right">
+        <input
+          class="input form-input"
+          type="text"
+          id="password-login"
+          placeholder="************"
+        />
+        <span class="icon is-left">
+          <ion-icon size="large" name="lock-closed"></ion-icon>
+        </span>
+      </div>
+    </div>
+    {{! <div class="form-group">
+      <button class="btn btn-primary" type="submit">login</button>
+    </div> }}
+    <div class="control">
+      <button class="button has-background-grey-light">Submit</button>
+    </div>
+
+     <p>
+      New to My Menu? <a class="is-link" href="/signup">Sign Up</a>
+
+    </p>
+
+  </form>
+  <script src="/js/login.js"></script>
+</div>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Menu</title>
+  <link rel="stylesheet" href="/css/bulma.css">
+  <link rel="stylesheet" href="/css/carouselstyle.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/css/bulma-carousel.min.css" />
+  <link rel="stylesheet" href="/css/style.css">
+  
+  
+</head>
+
+  <body>
+    <section class="hero">
+      <div class="hero-header flex-column">
+        <header>
+          <div class="navbar-menu mx-6" id="nav-links">
+            <nav class="navbar-start">
+            <a href="/" class="navbar-item">Homepage</a>
+            </nav>
+
+              {{!-- need to center logo in navbar 2/13 10:00pm --}}
+              <figure class="">
+                <img class="has-text-centered" src="/img/my-menu-logo-02.png" alt="site logo" id="site-logo">
+              </figure>
+              <a href="/search" class="navbar-item">Search</a>
+            
+              <!-- Conditionally render login or logout links -->
+              {{#if logged_in}}
+              <a class="navbar-item" href="/profile">Profile</a>
+              <button class="no-button navbar-item" id="logout">Logout</button>
+              {{else}}
+              <a class="navbar-item" href="/login">Login</a>
+              {{/if}}
+
+            </nav>
+          </div>
+        </header>
+        <section class="hero is-fullheight">
+        <main class="container container-fluid mt-5">
+          <!-- Render the sub layout -->
+          {{{ body }}}
+        </main>
+        <footer>
+          <div class="has-text-centered b-4 my-6">
+            <p>
+              Created by <a href="https://github.com/0zrk23">Gustavo Carrillo</a>, 
+              <a href="https://github.com/kfarshchian">Kameron Farshchian</a> and 
+              <a href="https://github.com/TheKelsenator">Kelsey O'Kelley</a>.
+            </p>
+          </div>
+        </footer>
+        </section>
+
+  <!-- Render script for logged in users only -->
+  {{#if logged_in}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
+  <script src="https://unpkg.com/ionicons@latest/dist/ionicons.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
+      integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U=" crossorigin="anonymous"></script>
+       <script src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/js/bulma-carousel.min.js"></script>
+ <script src="/public/js/carousel.js"></script>
+ <script>
+        bulmaCarousel.attach('#slider', {
+            slidesToScroll: 1,
+            slidesToShow: 1,
+            infinite: true,
+            autoplay: true,
+        });
+    </script>
+</body>
+
+</html>

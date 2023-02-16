@@ -1,0 +1,58 @@
+<section>
+<div class="row" id="welcome">
+    <div class="col-auto">
+        <h2 class="is-size-3">Welcome!</h2>
+    </div>
+    <p class="is-size-4">A delicious collection of of your favorite recipes. </p>
+</div>
+</section>
+<div class="favorites-container">
+  
+{{#each recipies as |recpie|}}
+
+  <div class="columns" id="profile-card">
+      <div class="column body" id="inner-card">
+            <div class="columns card-header-title">
+              <img class="thumbnail" src={{image}} />
+              <p class="column">
+                  Recipe: <span id="label">{{label}}</span>
+              </p>
+              <p class="column">
+                  Calories: <span id="calories">{{calories}}</span>
+              </p>
+              <p class="column">
+                  Cuisine type: <span id="cuisine-type">{{cuisine_type}}</span>
+              </p>
+              <p class="column">
+                  Servings: <span id="yield">{{yield}}</span>
+              </p>
+              <p class="column">
+                  Meal Type: <span id="meal-type">{{meal_type}}</span>
+              </p>
+          </div>
+          <div class="columns card-header-title">
+              <p class="column" id="health-labels">
+                  Health Label: <span class="scroll" id="health-labels">{{health_labels}}</span>
+              </p>
+              <p class="column" id="ingredients">
+                  Ingredients: <span class="scroll" id="ingredients">{{ingredients}}</span>
+              </p>
+              <p class="column">
+                  Link to Recipe: <span id="url">{{url}}</span>
+              </p>
+          </div>
+          <form class="delete-form card-footer-item">
+              <button class="deleteBTN button is-danger is-outlined" favorite-id='{{id}}'>
+                  <span favorite-id='{{id}}'>Delete</span>
+                  <span class="icon is-small" favorite-id='{{id}}'>
+                      <i class="fas fa-times" favorite-id='{{id}}'></i>
+                  </span>
+              </button>
+          </form>
+      </div>
+  </div>
+{{/each}}
+</div>
+
+
+<script src="./js/profile.js"></script>
