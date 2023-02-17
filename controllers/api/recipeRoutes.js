@@ -3,19 +3,9 @@ const { Recipe, Favorites } = require('../../models');
 const withAuth = require('../../utils/auth');
 const fs = require('fs');
 const sequelize = require('../../config/connection');
-const mysql = require('mysql2');
 
-const db = mysql.createConnection(
-  {
-    host: 'localhost',
-    // MySQL username,
-    user: process.env.DB_USER,
-    // MySQL password
-    password: process.env.DB_PASSWORD,
-    database: process.env.DB_NAME
-  },
-  console.log(`Connected to the diet_db database.`)
-).promise();
+
+
 
 router.post('/create_seeds', async (req, res) => {
   try {
