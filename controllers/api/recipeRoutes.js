@@ -11,7 +11,7 @@ const db = mysql.createConnection(
     user: process.env.DB_USER,
     password: process.env.DB_PASSWORD,
     database: process.env.DB_NAME,
-    socketPath: '/Applications/MAMP/tmp/mysql/mysql.sock'
+    socketPath: '/Applications/MAMP/tmp/mysql2/mysql2.sock'
   },
   console.log(`Connected to the diet_db database.`)
 ).promise();
