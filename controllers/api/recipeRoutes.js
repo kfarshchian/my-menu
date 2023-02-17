@@ -8,10 +8,11 @@ const mysql = require('mysql2');
 const db = mysql.createConnection(
   {
     host: 'localhost',
+    // MySQL username,
     user: process.env.DB_USER,
-    database: process.env.DB_NAME,
+    // MySQL password
     password: process.env.DB_PASSWORD,
-    socketPath: '/Applications/MAMP/tmp/mysql/mysql.sock'
+    database: process.env.DB_NAME
   },
   console.log(`Connected to the diet_db database.`)
 ).promise();
