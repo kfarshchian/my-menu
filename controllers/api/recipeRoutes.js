@@ -7,12 +7,17 @@ const mysql = require('mysql2');
 
 const db = mysql.createConnection(
   {
-    host: 'localhost',
+    
     // MySQL username,
     user: process.env.DB_USER,
     // MySQL password
     password: process.env.DB_PASSWORD,
-    database: process.env.DB_NAME
+    database: process.env.DB_NAME,
+    
+      host: '127.0.0.1',
+      dialect: 'mysql',
+      port: 3306
+    
   },
   console.log(`Connected to the diet_db database.`)
 ).promise();
