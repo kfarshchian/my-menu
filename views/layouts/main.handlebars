@@ -18,16 +18,17 @@
   <body>
     <section class="hero">
       <div class="hero-header flex-column">
-        <header>
+        <header id="large-screen">
           <div class="navbar-menu mx-6" id="nav-links">
-            <nav class="navbar-start">
-            <a href="/" class="navbar-item">Homepage</a>
+            <nav class="">
+            
             </nav>
 
               {{!-- need to center logo in navbar 2/13 10:00pm --}}
-              <figure class="">
+              <figure class="navbar-start">
                 <img class="has-text-centered" src="/img/my-menu-logo-02.png" alt="site logo" id="site-logo">
               </figure>
+              <a href="/" class="navbar-item">Homepage</a>
               <a href="/search" class="navbar-item">Search</a>
             
               <!-- Conditionally render login or logout links -->
@@ -37,10 +38,37 @@
               {{else}}
               <a class="navbar-item" href="/login">Login</a>
               {{/if}}
-
+                    {{!-- hidden hambuger until screen is 768 --}}  
             </nav>
           </div>
         </header>
+                  <header id="small-screen">
+                  <nav id="nav" class="navbar">
+                      <div class="navbar-brand navbar-start">
+                              <img src="/img/my-menu-logo-02.png" class="logo navbar-brand" id="small-logo"/>
+                          </div>
+                      <div class="navbar-menu">
+                            <div class=" navbar-item has-dropdown is-hoverable">
+                                <a id="menu" class="navbar-link">
+                                    Menu
+                                </a>
+                                <div class="navbar-dropdown">
+                                    <a href="/" class="navbar-item">Homepage</a>
+                                    <a href="/search" class="navbar-item">Search</a>
+                                    <a href ="#button"class="navbar-item">
+                                        {{#if logged_in}}
+                                        <a class="navbar-item" href="/profile">Profile</a>
+                                        <button class="no-button navbar-item" id="logout">Logout</button>
+                                        {{else}}
+                                        <a class="navbar-item" href="/login">Login</a>
+                                        {{/if}}
+                                    </a>
+                                    
+                                </div>
+                            </div>
+                      </div>
+                  </nav>
+              </header>
         <section class="hero is-fullheight">
         <main class="container container-fluid mt-5">
           <!-- Render the sub layout -->

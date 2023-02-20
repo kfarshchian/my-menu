@@ -4,8 +4,9 @@
   --seafoam: #94A6A6; 
   --lightgreen: #B5BFAA; 
   --lightest: #D5D9D0;
+  margin: 0;
+  padding: 0;
 }
-
 body {
   color: #4C6473;
   background-color: #B5BFAA;
@@ -134,14 +135,96 @@ padding: 10px;
 bottom: 75px;
 left: 600px;
 }
+#small-screen{
+  display: none;
+}
+.navbar-brand{
+  width: 250px;
+  height: 40px;
+  }
 
+  @media screen and (max-width: 1024px) {
+    #login-card{
+      width: 100%;
+    }
+    a.navbar-item{
+      color: #344859;
+    }
+    .navbar-menu {
+      align-items: stretch;
+      background-color: #B5BFAA;
+      font-size: 0.875rem;
+      display: flex;
+      flex-grow: 1;
+      flex-shrink: 0;
+      padding: 0;
+      border: none;
+   
+  
+      .navbar-item.is-active .navbar-dropdown,
+      .navbar-item.is-hoverable:focus .navbar-dropdown,
+      .navbar-item.is-hoverable:focus-within .navbar-dropdown,
+      .navbar-item.is-hoverable:hover .navbar-dropdown {
+        display: block;
+      }
+  
+      .navbar-end {
+        justify-content: flex-end;
+        margin-left: auto;
+        align-items: stretch;
+        display: flex;
+        
+  
+        .navbar-item.has-dropdown {
+          align-items: stretch;
+          
+        }
+  
+        .navbar-item,
+        .navbar-link {
+          align-items: center;
+          display: flex;
+          
+        }
+  
+        .navbar-dropdown {
+          background-color: #fff;
+          border-bottom-left-radius: 6px;
+          border-bottom-right-radius: 6px;
+          border-top: 2px solid #dbdbdb;
+          box-shadow: 0 8px 8px rgba(10, 10, 10, 0.1);
+          display: none;
+          font-size: 0.875rem;
+          left: 0;
+          min-width: 100%;
+          position: absolute;
+          top: 100%;
+          color: #344859;
+          z-index: 20;
+        }
+      }
+    }
+  }
 @media screen and (min-width: 769px) and (max-width: 1023px) {
-  #nav-links {
-    display: flex;
-    justify-content: stretch auto;
-    background: #35495A !important;
-    text-decoration: none;
+  #large-screen{
+    display: none;
+  }
+  #small-screen{
+    display: block;
+  }
+  .navbar-brand{
+    width: 250px;
+    height: 40px;
+    margin: 0;
+    padding: 0;
     border: none;
+
+  }
+  .navbar-link{
+    margin: 0; 
+    padding: 0;
+    border: none;
+    float: left;
   }
   #form{
     display: inline-block;
@@ -178,8 +261,6 @@ left: 600px;
   span{
     display: block;
     justify-content: center;
-    /* max-height: 300px;
-    max-width: 200px; */
   }
   #url {
       word-wrap: break-word;
@@ -195,10 +276,6 @@ left: 600px;
     height: 150px;
     width: 150px;
   }
-  /* .column{
-    border: 2px solid black; 
-    padding: 5px;
-  } */
   #savebtn{
     position: relative;
   float: right;
@@ -229,120 +306,24 @@ left: 600px;
   }
 }
 
-@media screen and (min-width: 481px) and (max-width: 768px) {
-  #nav-links {
-    display: flex;
-    justify-content: stretch auto;
-    background: #35495A !important;
-    text-decoration: none;
-    border: none;
-  }
-
-  .navbar-item {
-    font-size: 16px;
-  }
-  #form{
-    display: inline-block;
-    position: relative;
-    width: 40%;
-  }
-  #allCard.columns{
-    display: inline-block;
-    position: relative;
-    border: 2px solid black;
-    height: 475px;
-    width: 80%;
-    margin: 10px;
-    background-color: #D5D9D0;
-    justify-content: center;
-  }
-  #allCard{
-    display: inline-block;
-    border: 2px solid black;
-    height: 475px;
-    width: 80%;
-    margin: 10px;
-    background-color: #D5D9D0;
-  }
-  .card-header-title {
-   
-  }
-  #inner-card{
-    position: inherit;
-    top: 10px;
-    width: 75%;
-    justify-content: center;
-    height: 300px;
-  }
-  span{
-    display: block;
-    justify-content: center;
-    /* max-height: 300px;
-    max-width: 200px; */
-  }
-  #health-labels{
-    display: none;
-  }
-  #ingredients{
-    display: none;
-  }
-  #url {
-      word-wrap: break-word;
-      width: 45%;
-  }
-  .scroll {
-    float:right;
-    height: 250px;
-    width:250px;  
-    overflow-y: scroll;
-  }
-  .thumbnail{
-    height: 150px;
-    width: 150px;
-  }
-  /* .column{
-    border: 2px solid black; 
-    padding: 5px;
-  } */
-  #savebtn{
-    position: relative;
-  float: right;
-  bottom: 95px;
-  left: 150px;
-  }
-  .deleteBTN{
-    float: right;
-  padding: 10px;
-  left: 300px;
-  top: 45px;
-  }
-  /* .favorites-container{
-    display: grid;
-	place-items: center;
-  } */
-  #welcome{
-    display: grid;
-    place-items: center;
-  }
-  #carousel{
-    height: 200;
-    width: 1%;
-  }
-}
-
-/* Small Screens, Laptops */
 
 
 
 @media screen and (min-width: 320px) and (max-width: 480px) {
-  #nav-links {
-    display: flex;
-    justify-content: stretch auto;
-    background: #35495A !important;
-    text-decoration: none;
-    border: none;
-    width: 100%;
+  #large-screen{
+    display: none;
   }
+  #small-screen{
+    display: block;
+  }
+  .navbar-brand{
+    width: 300px;
+    margin: 0;
+    padding: 0;
+    border: none;
+
+  }
+  
   #form{
     display: inline-block;
     position: relative;
@@ -432,7 +413,13 @@ left: 600px;
     height: 650px;
   }
   #carousel{
-    height: 400px;
-    width: 800px;
+    position: relative;
+    height: 200px;
+    width: 375px;
+    left: 23px;
+  }
+  #get-started-button{
+    position: relative;
+    left: 29%;
   }
 }
