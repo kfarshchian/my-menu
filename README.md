@@ -31,8 +31,8 @@ Full-Stack Web Development Coding Bootcamp
 
 ## Screen Shot
 
-  ![alt_text](./)
-  ![alt_text](./)
-  ![alt_text](./)
+  ![alt_text](./assets/images/site1.png)
+  ![alt_text](./assets/images/site2.png)
+  ![alt_text](./assets/images/site3.png)
 
 ## Application Link
