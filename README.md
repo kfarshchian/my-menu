@@ -18,15 +18,15 @@
   - [Questions](#Questions)
   
   ## Installation
-  npm i 
-  npm i mysql
-  npm i mysql2
-  npm i dotenv
-  npm i sequelize
-  npm i express-handlebars
-  npm i bcrypt
-  npm i express-session
-  npm i connect-session-sequelize 
+  - npm i 
+  - npm i mysql
+  - npm i mysql2
+  - npm i dotenv
+  - npm i sequelize
+  - npm i express-handlebars
+  - npm i bcrypt
+  - npm i express-session
+  - npm i connect-session-sequelize 
 
   ## Usage
   ![alt_text](./assets/images/site1.png)
